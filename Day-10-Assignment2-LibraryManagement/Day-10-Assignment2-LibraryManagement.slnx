@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Day-10-Assignment2-LibraryManagement/Day-10-Assignment2-LibraryManagement.csproj" />
+  <Project Path="LibraryManagementTests/LibraryManagementTests.csproj" />
+</Solution>
