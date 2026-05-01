@@ -1,0 +1,13 @@
+﻿@page
+@model Day_10_Assignment3_Razorpage.Pages.ItemsModel
+<h1>Items List 🚀</h1>
+
+<ul>
+    @foreach (var item in ItemsModel.Items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<a href="/AddItem">Add New Item ➕</a>
+🔥
