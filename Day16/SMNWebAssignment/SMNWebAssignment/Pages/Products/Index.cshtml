@@ -1,0 +1,25 @@
+﻿@page
+@model SMNWebAssignment.Pages.Products.IndexModel
+
+
+<h2>Add Product</h2>
+
+<form method="post">
+    <input asp-for="NewProduct.ProductID" placeholder="ID" /><br />
+    <input asp-for="NewProduct.Name" placeholder="Name" /><br />
+    <input asp-for="NewProduct.Description" placeholder="Description" /><br />
+
+    <input name="NewProduct.Categories[0].CategoryName" placeholder="Category 1" />
+    <input name="NewProduct.Categories[1].CategoryName" placeholder="Category 2" />
+
+    <button type="submit">Add</button>
+</form>
+
+<hr />
+
+<h2>Products</h2>
+
+@foreach (var p in Model.Products)
+{
+    <partial name="_ProductSummary" model="p" />
+}

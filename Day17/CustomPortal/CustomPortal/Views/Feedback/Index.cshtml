@@ -1,0 +1,24 @@
+﻿@model CustomPortal.Models.Feedback
+@using CustomPortal.Helpers
+
+<form asp-action="Submit" method="post">
+
+    <h2>Feedback Form</h2>
+
+    @Html.CustomInput("Name")
+    <br />
+
+    @Html.CustomInput("Email")
+    @Html.DropDownListFor(m => m.Rating,
+        new SelectList(new[] { 1, 2, 3, 4, 5 }))
+    <br />
+
+    @Html.TextAreaFor(m => m.Comments)
+    <br />
+
+    <rating-stars stars="5"></rating-stars>
+
+    <br />
+    <button type="submit">Submit</button>
+
+</form>

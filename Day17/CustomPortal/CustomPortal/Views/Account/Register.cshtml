@@ -1,0 +1,32 @@
+﻿@model CustomPortal.Models.UserRegistration
+
+<h2>Register</h2>
+
+<form asp-action="Register" method="post">
+
+    @Html.ValidationSummary()
+
+    <label>Username</label>
+    @Html.TextBoxFor(m => m.Username)
+    @Html.ValidationMessageFor(m => m.Username)
+    <br />
+
+    <label>Email</label>
+    @Html.TextBoxFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+    <br />
+
+    <label>Password</label>
+    @Html.PasswordFor(m => m.Password)
+    @Html.ValidationMessageFor(m => m.Password)
+    <br />
+
+    <label>Confirm Password</label>
+    @Html.PasswordFor(m => m.ConfirmPassword)
+    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+    <br />
+
+    <button type="submit">Register</button>
+    
+
+</form>

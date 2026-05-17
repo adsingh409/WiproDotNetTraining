@@ -1,0 +1,14 @@
+﻿@model Product
+@using SMNWebAssignment.Models
+
+<div style="border:1px solid black; margin:10px; padding:10px;">
+    <h3>@Model.Name</h3>
+    <p>@Model.Description</p>
+
+    <ul>
+        @foreach (var c in Model.Categories)
+        {
+            <li>@c.CategoryName</li>
+        }
+    </ul>
+</div>
