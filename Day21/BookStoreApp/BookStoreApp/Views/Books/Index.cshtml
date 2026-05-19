@@ -1,0 +1,27 @@
+﻿@model List<Book>
+
+<h2>Book List</h2>
+
+<a href="/Books/Create">Add Book</a>
+
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td>@b.Title</td>
+            <td>@b.Author</td>
+            <td>@b.Price</td>
+            <td>
+                <a href="/Books/Edit/@b.Id">Edit</a> |
+                <a href="/Books/Delete/@b.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
