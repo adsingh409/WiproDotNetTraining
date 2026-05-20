@@ -1,0 +1,20 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.Author>
+
+<h2>Authors List</h2>
+
+<a href="/Authors/Create">Add New Author</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Bio</th>
+    </tr>
+
+    @foreach (var author in Model)
+    {
+        <tr>
+            <td>@author.Name</td>
+            <td>@author.Bio</td>
+        </tr>
+    }
+</table>
