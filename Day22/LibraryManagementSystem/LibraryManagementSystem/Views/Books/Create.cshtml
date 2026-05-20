@@ -1,0 +1,22 @@
+﻿@model LibraryManagementSystem.Models.Book
+
+<h2>Add Book</h2>
+
+<form method="post">
+    <label>Title:</label>
+    <input type="text" name="Title" />
+
+    <br /><br />
+
+    <label>Author:</label>
+    <select name="AuthorID">
+        @foreach (var author in ViewBag.Authors)
+        {
+            <option value="@author.AuthorID">@author.Name</option>
+        }
+    </select>
+
+    <br /><br />
+
+    <button type="submit">Save</button>
+</form>
